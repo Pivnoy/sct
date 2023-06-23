@@ -3,6 +3,7 @@ package main
 import (
 	"gocv.io/x/gocv"
 	"log"
+	"os"
 	"stc/internal"
 )
 
@@ -14,8 +15,12 @@ func SetVecbAt(m *gocv.Mat, row int, col int, v gocv.Vecb) {
 }
 
 func main() {
+	args := os.Args
+	if len(args) < 2 {
+		log.Fatal("Videofile argument is required")
+	}
 	vs := &internal.VideoService{}
-	vc, err := gocv.OpenVideoCapture("outcpp.avi")
+	vc, err := gocv.OpenVideoCapture(args[1])
 	defer vc.Close()
 	if err != nil {
 		log.Fatal(err)
