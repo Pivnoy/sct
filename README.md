@@ -23,8 +23,12 @@ $ make install
 ```shell
 $ git clone https://github.com/Pivnoy/sct.git 
 ```
+5. Open project dir
+```shell
+$ cd sct/
+```
 
-5. Run
+6. Run
 ```shell
 $ go run ./cmd/main/main.go [VIDEO.AVI]
 ```
