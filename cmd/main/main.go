@@ -25,7 +25,7 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
-	videoWriter, err := gocv.VideoWriterFile("./captured_video.avi", "X264", 25, 120, 120, true)
+	videoWriter, err := gocv.VideoWriterFile("edited_" + args[1], "X264", 25, 120, 120, true)
 	if err != nil {
 		log.Fatal(err)
 	}
