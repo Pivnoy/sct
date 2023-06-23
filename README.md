@@ -26,6 +26,6 @@ $ git clone https://github.com/Pivnoy/sct.git
 
 5. Run
 ```shell
-$ make run 
+$ go run ./cmd/main/main.go [VIDEO.AVI]
 ```
 
